@@ -38,6 +38,9 @@
 <ol start="8">
 <li><strong>勾选现货允许现货和杠杆交易并保存</strong></li>
 </ol>
+<div class="hint-container tip">
+<p class="hint-container-title">保存二维码,添加 key 需要使用</p>
+</div>
 <p><img src="@source/bansen/img/9.jpg" alt="编辑权限"></p>
 <!--  -->
 </div></template>
