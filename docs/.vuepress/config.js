@@ -52,7 +52,8 @@ export default defineUserConfig({
     editLinks: false, // 启用编辑链接
     docsDir: 'docs',
     editLinkText: '编辑此页',
-    contributors: false,
+    contributors: true,
+    contributorsText: '贡献者',
   }),
   bundler: webpackBundler(),
 })
