@@ -19,6 +19,8 @@ export default defineUserConfig({
   description: '波段智投帮助中心',
   // 设置主题配置
   theme: defaultTheme({
+    colorMode: 'dark', // 或 'dark'
+    colorModeSwitch: false, // 是否允许用户切换主题
     home: '/bansen/hello.html', // 禁用默认首页
     logo: './images/logo.png',
     // 配置导航栏
