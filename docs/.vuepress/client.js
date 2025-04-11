@@ -8,6 +8,8 @@ import * as directives from 'vuetify/directives'
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
 
+import './styles/index.css'
+
 export default defineClientConfig({
   enhance({ app }) {
     const vuetify = createVuetify({

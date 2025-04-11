@@ -4,17 +4,17 @@
       <template #navbar>
         <v-app-bar>
           <template v-slot:prepend>
-            <v-btn icon="mdi-arrow-left" @click="goBack()"></v-btn>
+            <v-btn size="small" icon="mdi-arrow-left" @click="goBack()"></v-btn>
           </template>
           <v-app-bar-title>帮助中心</v-app-bar-title>
           <template v-slot:append>
             <div class="d-none d-sm-block">
-              <v-menu v-for="(item, index) in navbarLinks" :key="index">
+              <v-menu>
                 <template v-slot:activator="{ props }">
-                  <v-btn v-bind="props">{{ item.text }}</v-btn>
+                  <v-btn v-bind="props" size="small">{{ navbarLinks[0].text }}</v-btn>
                 </template>
                 <v-list>
-                  <v-list-item v-for="(items, index) in item.children" :key="index" :value="index">
+                  <v-list-item v-for="(items, index) in navbarLinks[0].children" :key="index" :value="index">
                     <v-list-item-title @click="goToPage(items.link)">{{ items.text }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -22,17 +22,19 @@
             </div>
 
             <div class="d-block d-sm-none">
-              <v-menu v-for="(item, index) in navbarLinks" :key="index">
+              <v-menu>
                 <template v-slot:activator="{ props }">
-                  <v-btn v-bind="props" icon="mdi-menu"></v-btn>
+                  <v-btn v-bind="props" size="small" icon="mdi-menu"></v-btn>
                 </template>
                 <v-list>
-                  <v-list-item v-for="(items, index) in item.children" :key="index" :value="index">
+                  <v-list-item v-for="(items, index) in navbarLinks[0].children" :key="index" :value="index">
                     <v-list-item-title @click="goToPage(items.link)">{{ items.text }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
               </v-menu>
             </div>
+
+            <v-btn icon="mdi-github" size="small" @click="openInNewTab(navbarLinks[navbarLinks.length - 1].link)"></v-btn>
           </template>
         </v-app-bar>
       </template>
@@ -63,7 +65,9 @@
   const goToPage = (value) => {
     window.location.href = value // 跳转到指定页面
   }
-
+  const openInNewTab = (value) => {
+    window.open(value, '_blank')
+  }
   const goBack = () => {
     window.history.back() // 返回上一页
   }

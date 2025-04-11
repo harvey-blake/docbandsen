@@ -21,6 +21,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     colorMode: 'dark',
     colorModeSwitch: false,
+
     // 配置导航栏
     navbar: [
       {
@@ -41,6 +42,17 @@ export default defineUserConfig({
     },
 
     // sidebarDepth: 0,
+
+
+    editLink: true,
+
+    lastUpdatedText: '上次更新',
+
+    repo: 'harvey-blake/docbandsen', // 替换为您的 GitHub 仓库
+    editLinks: false, // 启用编辑链接
+    docsDir: 'docs',
+    editLinkText: '编辑此页',
+    contributors: false,
   }),
   bundler: webpackBundler(),
 })
