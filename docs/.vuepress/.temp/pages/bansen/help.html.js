@@ -1,0 +1,16 @@
+import comp from "E:/www/docbansen/docs/.vuepress/.temp/pages/bansen/help.html.vue"
+const data = JSON.parse("{\"path\":\"/bansen/help.html\",\"title\":\"新手入门\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"1. 绑定 KEY\",\"slug\":\"_1-绑定-key\",\"link\":\"#_1-绑定-key\",\"children\":[{\"level\":3,\"title\":\"点击绑定 key\",\"slug\":\"点击绑定-key\",\"link\":\"#点击绑定-key\",\"children\":[]},{\"level\":3,\"title\":\"点击扫描或手动输入\",\"slug\":\"点击扫描或手动输入\",\"link\":\"#点击扫描或手动输入\",\"children\":[]},{\"level\":3,\"title\":\"绑定 key\",\"slug\":\"绑定-key\",\"link\":\"#绑定-key\",\"children\":[]}]},{\"level\":2,\"title\":\"2. 预充手续费\",\"slug\":\"_2-预充手续费\",\"link\":\"#_2-预充手续费\",\"children\":[{\"level\":3,\"title\":\"点击充值\",\"slug\":\"点击充值\",\"link\":\"#点击充值\",\"children\":[]}]},{\"level\":2,\"title\":\"3. 添加策略\",\"slug\":\"_3-添加策略\",\"link\":\"#_3-添加策略\",\"children\":[{\"level\":3,\"title\":\"选择代币\",\"slug\":\"选择代币\",\"link\":\"#选择代币\",\"children\":[]},{\"level\":3,\"title\":\"编辑策略\",\"slug\":\"编辑策略\",\"link\":\"#编辑策略\",\"children\":[]},{\"level\":3,\"title\":\"添加策略\",\"slug\":\"添加策略\",\"link\":\"#添加策略\",\"children\":[]},{\"level\":3,\"title\":\"查看策略\",\"slug\":\"查看策略\",\"link\":\"#查看策略\",\"children\":[]}]}],\"git\":{},\"filePathRelative\":\"bansen/help.md\"}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
